@@ -4,6 +4,14 @@ channels:
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/
+  - https://mirrors.aliyun.com/anaconda/pkgs/main/
+  - https://mirrors.aliyun.com/anaconda/cloud/conda-forge/
+  - https://mirrors.aliyun.com/anaconda/cloud/bioconda/
+  - https://mirrors.bfsu.edu.cn/anaconda/pkgs/main/
+  - https://mirrors.bfsu.edu.cn/anaconda/cloud/conda-forge/
+  - https://mirrors.bfsu.edu.cn/anaconda/cloud/bioconda/
   - defaults
 dependencies:
   - alabaster=0.7.12=pyhd3eb1b0_0
