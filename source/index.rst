@@ -3,13 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to test's documentation!
+欢迎来到Yushiba972的笔记仓库!
 ================================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: 目录
 
+   conda/index.rst
 
 
 Indices and tables
