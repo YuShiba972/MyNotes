@@ -10,12 +10,12 @@
    :maxdepth: 2
    :caption: 目录
 
-   .. conda/index.rst
+   conda/index.rst
 
 
-.. Indices and tables
-.. ==================
+Indices and tables
+==================
 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
