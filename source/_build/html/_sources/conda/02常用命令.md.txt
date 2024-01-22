@@ -1,0 +1,24 @@
+conda常用命令速查
+=================================
+
+
+conda环境操作
+- 克隆环境 conda create --clone rst --name sphinx
+- 激活环境 conda activate sphinx
+- 删除环境 conda env remove --name YourEnvironment
+- 查询环境 conda info --envs | conda env list
+- 创建环境 conda create --name python3_8 python==3.8
+
+conda包操作
+- 查看当前虚拟环境的包 conda list
+- 查看指定虚拟环境的包 conda list --name env_name
+
+
+conda配置文件.condarc修改配置命令
+- conda环境安装根目录添加 conda config --add envs_dirs /path/to/your/preferred/envs
+- conda包安装根目录添加 conda config --add pkgs_dirs /path/to/your/preferred/pkgs
+- 查看所有conda配置(包括默认)：conda config --show
+- 显示配置文件 conda config --show-sources
+- 镜像地址显示 conda config --set show_channel_urls yes
+- 镜像源添加 conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+- conda init 全局conda

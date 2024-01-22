@@ -1,0 +1,34 @@
+基本介绍
+==============================
+
+**阅读前必看：python | docutils | sphinx 的联系**
+
+.. warning:: 
+    - ``python：高级编程语言``
+    - ``docutils：基于python编写的rst文档的解析工具，由python编写，存在形式为python包，可通过pip安装``
+    - ``sphinx：基于docutils文档解析引擎的文档生成工具，存在形式为python包，可通过pip安装``
+
+**RST语法指令**
+
+.. note::
+    | 1. ``docutils 指令`` ：rst的基础指令，以docutils生成的文档均支持
+    | 2. ``sphinx 指令`` ：rst高级指令，使用于使用sphinx的文档项目
+
+**测试平台**
+
+行内文本标记
+
+.. code-block:: rst
+
+    行内标记: *强调* 、 **特别强调** 、 `解释文本` 、 ``行内文本`` 、
+    独立超链接(http://www.python.org)、扩展超链接(Python_)、 
+    内部交叉引用(example_)、脚注引用([1]_)、引文引用([CIT2002]_)、替代引用(|example|)和 _`行内内部目标`.
+
+
+
+.. container:: custom-code-block
+
+   This is a custom block with a custom style.
+
+   It can contain multiple lines of text.
+

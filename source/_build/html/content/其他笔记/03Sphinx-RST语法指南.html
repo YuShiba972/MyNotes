@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinx-rst项目速查指南 &mdash; Notes dev 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=21faf2a6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../conda/index.html">conda 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../markdown/index.html">markdown指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/index.html">reStructuredText 指南</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">sphinx-rst项目速查指南</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/content/其他笔记/03Sphinx-RST语法指南.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-rst">
+<h1>sphinx-rst项目速查指南<a class="headerlink" href="#sphinx-rst" title="此标题的永久链接"></a></h1>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<div class="line-block">
+<div class="line"><em>参考链接：</em></div>
+<div class="line"><a class="reference external" href="https://docutils-zh-cn.readthedocs.io/zh-cn/latest/user/rst/quickstart.html">Docutils-RST 入门文档</a> | <a class="reference external" href="https://docutils-zh-cn.readthedocs.io/zh-cn/latest/ref/rst/directives.html">Docutils-RST 指令文档</a></div>
+<div class="line"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Sphinx-RST 入门文档</a> | <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html">Sphinx-RST 指令文档</a></div>
+<div class="line"><a class="reference external" href="https://www.sphinx-doc.org/zh-cn/master/index.html">Sphinx 项目文档</a> | <a class="reference external" href="https://docutils-zh-cn.readthedocs.io/zh-cn/latest/index.html">Docutils项目文档</a></div>
+<div class="line"><a class="reference external" href="https://www.megengine.org.cn/doc/stable/zh/development/docs/restructuredtext.html#">MegEngine-Sphinx RST入门教程</a></div>
+</div>
+</div>
+<section id="id4">
+<h2>01 段落与行内标记<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>换行：空行或者行块符号
+
+  第一行文本
+
+  第二行文本
+
+  <span class="o">|</span> 第一行文本
+  <span class="o">|</span> 第二行文本
+</pre></div>
+</div>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>不换行：相同缩进
+
+  第一行文本
+  第二行文本
+
+效果：第一行文本 第二行文本
+</pre></div>
+</div>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>行内标记：
+
+  <span class="ge">*斜体文本*</span>
+
+  <span class="gs">**强调文本**</span>
+
+  <span class="s">``高亮文本``</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h2>02 标题<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span><span class="gh">一级标题文本</span>
+<span class="gh">=====================</span>
+
+<span class="gh">二级标题文本</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="gh">三级标题文本</span>
+<span class="gh">------------------</span>
+
+<span class="gh">四级标题文本</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="gh">五级标题文本</span>
+<span class="gh">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+
+<span class="gh">六级标题文本</span>
+<span class="gh">*****************</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>03 列表<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>定义列表：定义行顶格写，下一行开始为解释行，需要缩进，同一缩进量表示同一行文本，分行使用空行分割
+
+这里是定义变量1的标识
+    这里是定义变量1的文本解释内容。(单行)
+
+这里是定义变量2的标识
+    这里是定义变量2的文本解释内容。(多行不换行)
+    这里是定义变量2的文本解释内容。
+
+这里是定义变量3的标识
+    这里是定义变量3的文本解释内容。(多行换行)
+
+    这里是定义变量3的文本解释内容。(多行换行)
+</pre></div>
+</div>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>无序列表：支持 +、-、*
+
+<span class="m">-</span> test text
+<span class="m">-</span> test text
+<span class="m">-</span> test text
+</pre></div>
+</div>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>有序列表（支持数字、大小写字母和罗马数字）：# 号自动排序
+
+<span class="m">1.</span> test text
+<span class="m">#.</span> test text
+<span class="m">#.</span> test text
+
+a. test text
+<span class="m">#.</span> test text
+<span class="m">#.</span> test text
+
+A. test text
+<span class="m">#.</span> test text
+<span class="m">#.</span> test text
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h2>04 图片和超链接<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>图片：
+  .. image:: ../_static/restructuredtext/moon.webp
+  <span class="nc">:height:</span> 100
+  <span class="nc">:width:</span> 200
+  <span class="nc">:scale:</span> 50
+  <span class="nc">:alt:</span> 资源不存在显示文本
+</pre></div>
+</div>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>外联超链接：
+  .. _python官网: https://www.python.org/
+  以下链接可点击：<span class="s">`python官网`_</span>
+</pre></div>
+</div>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>内联超链接：
+  <span class="s">`python官网 </span><span class="si">&lt;https://www.python.org/&gt;</span><span class="s">`_</span>
+</pre></div>
+</div>
+</section>
+<section id="id8">
+<h2>05 块<a class="headerlink" href="#id8" title="此标题的永久链接"></a></h2>
+<div class="highlight-restructuredtext notranslate"><div class="highlight"><pre><span></span>文本块：
+
+文本块首行<span class="se">::</span>
+
+<span class="s">    text is left as-is.</span>
+<span class="s">    literal_block:</span>
+
+
+代码块：
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">python</span>
+
+    <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+        <span class="k">pass</span>
+
+
+    <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+        <span class="n">main</span><span class="p">()</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-155">06 引用</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, Arthur。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

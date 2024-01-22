@@ -1,0 +1,7 @@
+reStructuredText 介绍
+==============================
+
+.. note::
+    | RST语法指令 
+    | 1. ``docutils`` 指令：rst的基础指令，以docutils生成的文档均支持
+    | 2. ``sphinx`` 指令：rst高级指令，使用于使用sphinx的文档项目

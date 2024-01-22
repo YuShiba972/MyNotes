@@ -1,0 +1,86 @@
+02 高级语法
+==============================
+
+********************************************************
+
+代码块
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- 源代码
+.. code-block:: rst
+
+    .. code-block::python
+        def main():
+            return True
+
+- **实现效果**
+.. code-block:: python
+
+    def main():
+        return True
+
+********************************************************
+
+选项卡
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. note:: 
+
+  - `参考链接(https://www.python.org/) <https://www.python.org/>`_ 
+
+- **文字选项卡源代码**
+.. code-block:: rst
+
+    .. tabs::
+
+    .. tab:: Apples
+
+        Apples are green, or sometimes red.
+
+    .. tab:: Pears
+
+        Pears are green.
+
+- **实现效果**
+.. tabs::
+
+   .. tab:: Apples
+
+      Apples are green, or sometimes red.
+
+   .. tab:: Pears
+
+      Pears are green.
+
+- **代码选项卡源代码**
+.. code-block:: rst
+
+    .. tabs::
+
+    .. code-tab:: c++
+
+            C++ Main Function
+
+    .. code-tab:: py
+
+            Python Main Function
+
+    .. code-tab:: java
+
+            Java Main Function
+
+- **实现效果**
+.. tabs::
+
+   .. code-tab:: c++
+
+         C++ Main Function
+
+   .. code-tab:: py
+
+         Python Main Function
+
+   .. code-tab:: java
+
+         Java Main Function
+

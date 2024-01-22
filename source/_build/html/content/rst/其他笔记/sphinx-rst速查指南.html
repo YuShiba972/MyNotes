@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinx-rst 指令 &mdash; Notes dev 文档</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js?v=21faf2a6"></script>
+        <script src="../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../conda/index.html">conda 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../markdown/index.html">markdown指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">reStructuredText 指南</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">sphinx-rst 指令</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/content/rst/其他笔记/sphinx-rst速查指南.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-rst">
+<h1>sphinx-rst 指令<a class="headerlink" href="#sphinx-rst" title="此标题的永久链接"></a></h1>
+<section id="id1">
+<h2>01 文档树指令<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p class="linemarker linemarker-9"><strong>基础</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="linenos">2</span> <span class="nc">:maxdepth:</span> 2
+<span class="linenos">3</span> <span class="nc">:caption:</span> 目录
+<span class="linenos">4</span>
+<span class="linenos">5</span> index1.rst
+<span class="linenos">6</span> index2.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-20"><strong>可选项</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+<span class="linenos"> 2</span> <span class="nc">:maxdepth:</span>
+<span class="linenos"> 3</span> <span class="nc">:caption:</span>
+<span class="linenos"> 4</span> <span class="nc">:hidden:</span>
+<span class="linenos"> 5</span> <span class="nc">:glob:</span>
+<span class="linenos"> 6</span> <span class="nc">:reversed:</span>
+<span class="linenos"> 7</span> <span class="nc">:includehidden:</span>
+<span class="linenos"> 8</span> <span class="nc">:titlesonly:</span>
+<span class="linenos"> 9</span> <span class="nc">:numbered:</span>
+<span class="linenos">10</span> <span class="nc">:name:</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span> index1.rst
+<span class="linenos">13</span> index2.rst
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>02 提示块指令<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> 这是自定义标题
+
+  这是admonition内容
+
+<span class="p">..</span> <span class="ow">note</span><span class="p">::</span> 这是note内容
+
+<span class="p">..</span> <span class="ow">attention</span><span class="p">::</span> 这是attention内容
+
+<span class="p">..</span> <span class="ow">caution</span><span class="p">::</span> 这是caution内容
+
+<span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> 这是warning内容
+
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span> 这是tip内容
+
+<span class="p">..</span> <span class="ow">important</span><span class="p">::</span> 这是important内容
+
+<span class="p">..</span> <span class="ow">hint</span><span class="p">::</span> 这是hint内容
+
+<span class="p">..</span> <span class="ow">error</span><span class="p">::</span> 这是error内容
+
+<span class="p">..</span> <span class="ow">danger</span><span class="p">::</span> 这是danger内容
+</pre></div>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">这是自定义标题</p>
+<p class="linemarker linemarker-68">这是admonition内容</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-70">这是note内容</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p class="linemarker linemarker-72">这是attention内容</p>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">小心</p>
+<p class="linemarker linemarker-74">这是caution内容</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p class="linemarker linemarker-76">这是warning内容</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p class="linemarker linemarker-78">这是tip内容</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p class="linemarker linemarker-80">这是important内容</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">提示</p>
+<p class="linemarker linemarker-82">这是hint内容</p>
+</div>
+<div class="admonition error">
+<p class="admonition-title">错误</p>
+<p class="linemarker linemarker-84">这是error内容</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">危险</p>
+<p class="linemarker linemarker-86">这是danger内容</p>
+</div>
+</section>
+<section id="id3">
+<h2>03 版本管理块指令<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 版本1.0
+  <span class="ge">*新增内容*</span>
+
+<span class="p">..</span> <span class="ow">versionchanged</span><span class="p">::</span> 版本2.0
+  <span class="ge">*改变内容*</span>
+
+<span class="p">..</span> <span class="ow">deprecated</span><span class="p">::</span> 版本3.0
+  <span class="ge">*弃用内容*</span>
+</pre></div>
+</div>
+<div class="versionadded">
+<p class="linemarker linemarker-105"><span class="versionmodified added">在 版本1.0 版本加入: </span><em>新增内容</em></p>
+</div>
+<div class="versionchanged">
+<p class="linemarker linemarker-108"><span class="versionmodified changed">在 版本2.0 版本发生变更: </span><em>改变内容</em></p>
+</div>
+<div class="deprecated">
+<p class="linemarker linemarker-111"><span class="versionmodified deprecated">自 版本3.0 版本弃用: </span><em>弃用内容</em></p>
+</div>
+</section>
+<section id="id4">
+<h2>04 文字处理指令<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">centered</span><span class="p">::</span> 居中文本
+
+<span class="p">..</span> <span class="ow">rubric</span><span class="p">::</span> 不记录目录树的标题
+
+<span class="p">..</span> <span class="ow">hlist</span><span class="p">::</span>
+  <span class="nc">:columns:</span> 3
+
+  <span class="m">*</span> 多列项目元素1
+  <span class="m">*</span> 多列项目元素2
+  <span class="m">*</span> 多列项目元素3
+  <span class="m">*</span> 多列项目元素4
+  <span class="m">*</span> 多列项目元素5
+</pre></div>
+</div>
+<p class="centered">
+<strong>居中文本</strong></p><p class="rubric">不记录目录树的标题</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p class="linemarker linemarker-138">多列项目元素1</p></li>
+<li><p class="linemarker linemarker-139">多列项目元素2</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p class="linemarker linemarker-140">多列项目元素3</p></li>
+<li><p class="linemarker linemarker-141">多列项目元素4</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p class="linemarker linemarker-142">多列项目元素5</p></li>
+</ul>
+</td></tr></table>
+</section>
+<section id="id5">
+<h2>05 代码块指令<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-148"><strong>全局代码配置：highlight</strong></p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>设置文档中大于5行的python代码显示行数:
+
+<span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> python
+  <span class="nc">:linenothreshold:</span> 5
+</pre></div>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>设置文档所有python代码显示行数(force优先级大):
+
+<span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> python
+  <span class="nc">:force:</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-163"><strong>代码块：使用code-block或sourcecode</strong></p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>shell代码块：
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> <span class="k">shell</span>
+
+  <span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;hello world!&#39;</span>
+
+python代码块：
+<span class="p">..</span> <span class="ow">sourcecode</span><span class="p">::</span> <span class="k">python</span>
+
+  <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-179">shell代码块：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;hello world!&#39;</span>
+</pre></div>
+</div>
+<p class="linemarker linemarker-185">python代码块：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-192"><strong>代码块可选项：linenos行数显示 | emphasize-lines强调行 | caption导航文本 | name预定义引用名</strong></p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span>
+  <span class="nc">:linenos:</span>
+  <span class="nc">:emphasize-lines:</span> 3,5
+  <span class="nc">:caption:</span> this.py
+  <span class="nc">:name:</span> this-py
+
+  def some_function():
+    interesting = False
+    print(&#39;This line is highlighted.&#39;)
+    print(&#39;This one is not...&#39;)
+    print(&#39;...but this one is.&#39;)
+</pre></div>
+</div>
+<div class="literal-block-wrapper docutils container" id="this-py">
+<div class="code-block-caption"><span class="caption-text">this.py</span><a class="headerlink" href="#this-py" title="此代码块的永久链接"></a></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">2</span><span class="k">def</span> <span class="nf">some_function</span><span class="p">():</span>
+<span class="linenos">3</span>  <span class="n">interesting</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="hll"><span class="linenos">4</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This line is highlighted.&#39;</span><span class="p">)</span>
+</span><span class="linenos">5</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;This one is not...&#39;</span><span class="p">)</span>
+<span class="hll"><span class="linenos">6</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;...but this one is.&#39;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-221"><strong>外部代码文件引用：literalinclude，可选项：encoding编码 | lines引用指定行 | …</strong></p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">literalinclude</span><span class="p">::</span> index.rst
+  <span class="nc">:linenos:</span>
+  <span class="nc">:language:</span> rst
+  <span class="nc">:emphasize-lines:</span> 1-7,10
+  <span class="nc">:encoding:</span> utf-8
+  <span class="nc">:lines:</span> 1-11
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h2>06 专业术语指令<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-245"><strong>glossary指令定义术语，:term:`术语名`引用</strong></p>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">glossary</span><span class="p">::</span>
+
+    term1
+        This is the definition of term1.
+
+    term2
+        Definition of term2 goes here.
+
+<span class="na">:term:</span><span class="nv">`term1`</span> an important concept in our system.
+</pre></div>
+</div>
+<dl class="simple glossary">
+<dt id="term-term1">term1<a class="headerlink" href="#term-term1" title="此术语词汇的永久链接"></a></dt><dd><p class="linemarker linemarker-264">This is the definition of term1.</p>
+</dd>
+<dt id="term-term2">term2<a class="headerlink" href="#term-term2" title="此术语词汇的永久链接"></a></dt><dd><p class="linemarker linemarker-267">Definition of term2 goes here.</p>
+</dd>
+</dl>
+<p class="linemarker linemarker-269"><a class="reference internal" href="#term-term1"><span class="xref std std-term">term1</span></a> an important concept in our system.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, Arthur。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

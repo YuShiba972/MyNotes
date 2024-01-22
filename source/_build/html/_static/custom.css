@@ -1,0 +1,44 @@
+.custom-code-block {
+    background-color: #000;  /* 设置为黑色 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.two-columns {
+    display: flex;
+}
+
+.right-column {
+    margin-left: 20px; /* 设置右列的左边距，以保持两列之间的间距 */
+}
+
+/* custom.css */
+
+note {
+    border: 2px solid #000;  /* 设置边框颜色 */
+    background-color: #ecf0f1;  /* 设置背景颜色 */
+    padding: 10px;              /* 设置内边距 */
+    border-radius: 5px;         /* 设置边框圆角 */
+    margin: 10px 0;             /* 设置外边距 */
+}
+
+div.note.custom {
+    border: 2px solid #ffcc00; /* 自定义边框样式 */
+    background-color: #ffffcc; /* 自定义背景颜色 */
+    padding: 10px; /* 自定义内边距 */
+}
+
+
+/* _static/custom.css */
+
+.custom-block {
+    background-color: #7c14eb;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    color: #e11010;
+}

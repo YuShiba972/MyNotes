@@ -1,0 +1,164 @@
+sphinx-rst项目速查指南
+============================================
+
+.. note:: 
+    | *参考链接：*
+    | `Docutils-RST 入门文档 <https://docutils-zh-cn.readthedocs.io/zh-cn/latest/user/rst/quickstart.html>`_ | `Docutils-RST 指令文档 <https://docutils-zh-cn.readthedocs.io/zh-cn/latest/ref/rst/directives.html>`_ 
+    | `Sphinx-RST 入门文档 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html>`_ | `Sphinx-RST 指令文档 <https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html>`_ 
+    | `Sphinx 项目文档 <https://www.sphinx-doc.org/zh-cn/master/index.html>`_ | `Docutils项目文档 <https://docutils-zh-cn.readthedocs.io/zh-cn/latest/index.html>`_ 
+    | `MegEngine-Sphinx RST入门教程 <https://www.megengine.org.cn/doc/stable/zh/development/docs/restructuredtext.html#>`_ 
+
+01 段落与行内标记
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: restructuredtext
+
+  换行：空行或者行块符号
+
+    第一行文本
+
+    第二行文本 
+
+    | 第一行文本
+    | 第二行文本
+
+
+.. code-block:: restructuredtext
+
+  不换行：相同缩进
+
+    第一行文本
+    第二行文本
+
+  效果：第一行文本 第二行文本
+
+.. code-block:: restructuredtext
+
+  行内标记：
+
+    *斜体文本*
+
+    **强调文本**
+
+    ``高亮文本`` 
+
+02 标题
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: restructuredtext
+
+    一级标题文本
+    =====================
+
+    二级标题文本
+    ~~~~~~~~~~~~~~~~~~~~~
+
+    三级标题文本
+    ------------------
+
+    四级标题文本
+    ^^^^^^^^^^^^^^^^^^^^^
+
+    五级标题文本
+    """""""""""""""""
+
+    六级标题文本
+    *****************
+
+03 列表
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: restructuredtext
+
+    定义列表：定义行顶格写，下一行开始为解释行，需要缩进，同一缩进量表示同一行文本，分行使用空行分割
+
+    这里是定义变量1的标识
+        这里是定义变量1的文本解释内容。(单行)
+
+    这里是定义变量2的标识
+        这里是定义变量2的文本解释内容。(多行不换行)
+        这里是定义变量2的文本解释内容。
+
+    这里是定义变量3的标识
+        这里是定义变量3的文本解释内容。(多行换行)
+        
+        这里是定义变量3的文本解释内容。(多行换行)
+
+
+
+.. code-block:: restructuredtext
+
+    无序列表：支持 +、-、*
+
+    - test text
+    - test text
+    - test text
+
+.. code-block:: restructuredtext
+
+    有序列表（支持数字、大小写字母和罗马数字）：# 号自动排序
+
+    1. test text
+    #. test text
+    #. test text
+
+    a. test text
+    #. test text
+    #. test text
+
+    A. test text
+    #. test text
+    #. test text
+
+04 图片和超链接
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: restructuredtext
+
+  图片：
+    .. image:: ../_static/restructuredtext/moon.webp
+    :height: 100
+    :width: 200
+    :scale: 50
+    :alt: 资源不存在显示文本
+
+.. code-block:: restructuredtext
+
+  外联超链接：
+    .. _python官网: https://www.python.org/
+    以下链接可点击：`python官网`_
+
+.. code-block:: restructuredtext
+
+  内联超链接：
+    `python官网 <https://www.python.org/>`_ 
+
+
+05 块
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. code-block:: restructuredtext
+
+    文本块：
+
+    文本块首行::
+
+        text is left as-is.
+        literal_block:
+
+
+    代码块：
+
+    .. code-block:: python
+
+        def main():
+            pass   
+
+
+        if __name__ == '__main__':
+            main()  
+
+
+.. container:: custom-block
+
+   This is a custom block with a custom style.
+
+   It can contain multiple lines of text.
+
+
+
