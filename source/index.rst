@@ -9,10 +9,11 @@
 .. toctree::
    :maxdepth: 2
    :caption: 目录
+   :numbered:
 
-   ./content/conda/index.rst
-   ./content/markdown/index.rst
-   ./content/rst/index.rst
+   ./doc1_conda/index.rst
+   ./doc2_markdown/index.rst
+   ./doc3_rst/index.rst
 
-
-https://sphinx-themes.org/#themes
+.. https://sphinx-themes.org/#themes
+.. 文档路径编写相对source目录的路径
