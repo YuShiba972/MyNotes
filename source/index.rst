@@ -11,9 +11,9 @@
    :caption: 目录
    :numbered:
 
-   ./doc1_conda/index.rst
-   ./doc2_markdown/index.rst
-   ./doc3_rst/index.rst
+   ./_content/doc1_conda/index.rst
+   ./_content/doc2_markdown/index.rst
+   ./_content/doc3_rst/index.rst
 
 .. https://sphinx-themes.org/#themes
 .. 文档路径编写相对source目录的路径
