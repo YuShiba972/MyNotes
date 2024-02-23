@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>基础语法 &mdash; Notes dev 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=21faf2a6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="拓展语法" href="03%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95.html" />
+    <link rel="prev" title="基本介绍" href="01%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../doc1_conda/index.html">conda 笔记</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc2_markdown/index.html">markdown指南</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">reStructuredText 指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.html">基本介绍</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">基础语法</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">目录树指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">标题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">段落</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">行内标记</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">列表</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">参考链接</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">图片指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">提示块指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">代码块指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">表格指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">脚注、引用与替换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">版本管理块指令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">文字特殊处理指令(分列、居中、无索引标题)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95.html">拓展语法</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">reStructuredText 指南</a></li>
+      <li class="breadcrumb-item active">基础语法</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/_content/doc3_rst/02基础语法.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="id1">
+<h1>基础语法<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h1>
+<div class="admonition- admonition">
+<p class="admonition-title">阅读前须知</p>
+<div class="line-block">
+<div class="line"><em>本文档语法适用于基于docutils模块的sphinx项目。</em></div>
+</div>
+</div>
+<section id="id2">
+<h2>目录树指令<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-14">numbered：自动生成目录序号。</p></li>
+<li><p class="linemarker linemarker-15">caption：目录的标题。</p></li>
+<li><p class="linemarker linemarker-16">maxdepth：目录显示的最大深度。</p></li>
+<li><p class="linemarker linemarker-17"><em>name：预定义的名字，便于ref引用。</em></p></li>
+<li><p class="linemarker linemarker-18"><em>glob：使用unix通配符时需添加。</em></p></li>
+</ul>
+<div class="line-block">
+<div class="line"><em>相关参考链接</em></div>
+<div class="line"><a class="reference external" href="https://sphinx-doc.readthedocs.io/zh-cn/master/usage/restructuredtext/directives.html">https://sphinx-doc.readthedocs.io/zh-cn/master/usage/restructuredtext/directives.html</a></div>
+<div class="line"><a class="reference external" href="http://www.pythondoc.com/sphinx/markup/toctree.html">http://www.pythondoc.com/sphinx/markup/toctree.html</a></div>
+</div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-24"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+  <span class="nc">:caption:</span> 文档显示的目录名
+  <span class="nc">:maxdepth:</span> 2
+  <span class="nc">:numbered:</span>
+
+  doc1.rst
+  doc2.rst
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>标题<a class="headerlink" href="#id3" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-41">标题文本、标题符号 <code class="docutils literal notranslate"><span class="pre">顶格写</span></code> ，标题符号位于标题文本下一行。</p></li>
+<li><p class="linemarker linemarker-42">标题符号长度 <code class="docutils literal notranslate"><span class="pre">不小于</span></code> 标题文本长度。</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-44"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-RST notranslate"><div class="highlight"><pre><span></span><span class="gh">一级标题文本</span>
+<span class="gh">=====================</span>
+
+<span class="gh">二级标题文本</span>
+<span class="gh">~~~~~~~~~~~~~~~~~~~~~</span>
+
+<span class="gh">三级标题文本</span>
+<span class="gh">------------------</span>
+
+<span class="gh">四级标题文本</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="gh">五级标题文本</span>
+<span class="gh">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+
+<span class="gh">六级标题文本</span>
+<span class="gh">*****************</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>段落<a class="headerlink" href="#id4" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-72">分行：缩进表示层级，同一行的文字缩进相等，精确分行使用 <code class="docutils literal notranslate"><span class="pre">空行分隔</span></code> 或者 <code class="docutils literal notranslate"><span class="pre">|</span></code> 符号.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-74"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>这是第一行
+这也是第一行
+
+<span class="o">|</span> 这是第一行，无行间距
+<span class="o">|</span> 这是第二行，有行间距
+
+这是第一行
+
+这是第二行
+</pre></div>
+</div>
+<ul>
+<li><p class="linemarker linemarker-88"><strong>实现效果</strong></p>
+<p class="linemarker linemarker-90">这是第一行
+这也是第一行</p>
+<div class="line-block">
+<div class="line">这是第一行</div>
+<div class="line">这是第二行，无行间距</div>
+</div>
+<p class="linemarker linemarker-96">这是第一行</p>
+<p class="linemarker linemarker-98">这是第二行，有行间距</p>
+</li>
+</ul>
+</section>
+<section id="id5">
+<h2>行内标记<a class="headerlink" href="#id5" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-106">字符处理符号前后需要预留空格，否则不生效.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-108"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>这是一个 <span class="ge">*斜体文本*</span> 的示例
+
+这是一个 <span class="gs">**强调文本**</span> 的示例
+
+这是一个 <span class="s">``高亮文本``</span> 的示例
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-118"><strong>实现效果</strong></p></li>
+</ul>
+<p class="linemarker linemarker-120">这是一个 <em>斜体文本</em> 的示例</p>
+<p class="linemarker linemarker-122">这是一个 <strong>强调文本</strong> 的示例</p>
+<p class="linemarker linemarker-124">这是一个 <code class="docutils literal notranslate"><span class="pre">高亮文本</span></code> 的示例</p>
+</section>
+<section id="id6">
+<h2>列表<a class="headerlink" href="#id6" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-132">无序列表符号后需要 <code class="docutils literal notranslate"><span class="pre">接一个空格</span></code>，支持符号 <code class="docutils literal notranslate"><span class="pre">&quot;*</span> <span class="pre">+</span> <span class="pre">-&quot;</span></code>.</p></li>
+<li><p class="linemarker linemarker-133">有序列表符号后需要 <code class="docutils literal notranslate"><span class="pre">接一个空格</span></code> ， 支持 <code class="docutils literal notranslate"><span class="pre">数字、大小写字母和罗马数字</span></code> .</p></li>
+<li><p class="linemarker linemarker-134">变量定义列表中的 <code class="docutils literal notranslate"><span class="pre">第一行为定义行顶格写，下一行开始为解释行，需要缩进</span></code> ，同一缩进量表示同一行文本，分行使用空行分割.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-137"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>无序列表
+
+<span class="m">-</span> test text
+<span class="m">-</span> test text
+
+有序列表
+
+<span class="m">1.</span> test text
+<span class="m">#.</span> test text
+
+A. test text
+<span class="m">#.</span> test text
+
+变量列表
+
+这里是定义变量1的标识
+  这里是定义变量1的文本解释内容
+
+这里是定义变量2的标识
+  这里是定义变量2的文本解释内容
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-162"><strong>实现效果</strong></p></li>
+</ul>
+<p class="linemarker linemarker-164">无序列表</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-166">test text</p></li>
+<li><p class="linemarker linemarker-167">test text</p></li>
+</ul>
+<p class="linemarker linemarker-169">有序列表</p>
+<ol class="arabic simple">
+<li><p class="linemarker linemarker-171">test text</p></li>
+<li><p class="linemarker linemarker-172">test text</p></li>
+</ol>
+<ol class="upperalpha simple">
+<li><p class="linemarker linemarker-174">test text</p></li>
+<li><p class="linemarker linemarker-175">test text</p></li>
+</ol>
+<p class="linemarker linemarker-177">变量列表</p>
+<dl class="simple">
+<dt>这里是定义变量1的标识</dt><dd><p class="linemarker linemarker-180">这里是定义变量1的文本解释内容</p>
+</dd>
+<dt>这里是定义变量2的标识</dt><dd><p class="linemarker linemarker-183">这里是定义变量2的文本解释内容</p>
+</dd>
+</dl>
+</section>
+<section id="id7">
+<h2>参考链接<a class="headerlink" href="#id7" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-191">参考链接分为内部链接和外部链接，内部链接直接调用，外部链接需要预定义再引用.</p></li>
+</ul>
+</div>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>内部链接通用格式：<span class="s">`链接显示文本 </span><span class="si">&lt;链接地址&gt;</span><span class="s">`_</span>
+
+外部链接通用格式：
+
+    预定义步骤：.. _链接显示文本: 链接地址
+
+    引用步骤：<span class="s">`链接显示文本`_</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-203"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>内部链接：<span class="s">`python官网 </span><span class="si">&lt;https://www.python.org/&gt;</span><span class="s">`_</span>
+
+<span class="p">..</span> <span class="nt">_python官网:</span> https://www.python.org/
+
+外部链接：<span class="s">`python官网`_</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-213"><strong>实现效果</strong></p></li>
+</ul>
+<p class="linemarker linemarker-215">内部链接：<a class="reference external" href="https://www.python.org/">python官网</a></p>
+<p class="linemarker linemarker-219">外部链接：<a class="reference external" href="https://www.python.org/">python官网</a></p>
+</section>
+<section id="id9">
+<h2>图片指令<a class="headerlink" href="#id9" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-227">可使用指令image或者figure，figure功能更加全面支持image的所有参数，并提供额外参数.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-229"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ./figure/moon.webp
+  <span class="nc">:height:</span> 100
+  <span class="nc">:width:</span> 200
+  <span class="nc">:scale:</span> 50
+  <span class="nc">:alt:</span> 资源不存在显示文本
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-239"><strong>实现效果</strong></p></li>
+</ul>
+<a class="reference internal image-reference" href="../../_images/moon.webp"><img alt="资源不存在显示文本" src="../../_images/moon.webp" style="width: 100.0px; height: 50.0px;" /></a>
+</section>
+<section id="id10">
+<h2>提示块指令<a class="headerlink" href="#id10" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-253">可使用预定义提示块指令和自定义提示块指令.</p></li>
+<li><p class="linemarker linemarker-254">预定义提示块指令有：note | attention | caution | warning | tip | important | hint | error | danger</p></li>
+<li><p class="linemarker linemarker-255">自定义提示块指令为：admonition</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-257"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">note</span><span class="p">::</span>
+
+  这是note内容.
+
+<span class="p">..</span> <span class="ow">admonition</span><span class="p">::</span> 这是自定义标题
+
+  这是admonition内容.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-269"><strong>实现效果</strong></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">备注</p>
+<p class="linemarker linemarker-273">这是note内容.</p>
+</div>
+<div class="admonition- admonition">
+<p class="admonition-title">这是自定义标题</p>
+<p class="linemarker linemarker-277">这是admonition内容.</p>
+</div>
+</section>
+<section id="id11">
+<h2>代码块指令<a class="headerlink" href="#id11" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-285">全局代码配置指令为 <code class="docutils literal notranslate"><span class="pre">highlight</span></code> ，可选参数有 <code class="docutils literal notranslate"><span class="pre">linenothreshold</span></code> 控制代码行数显示门限 |  <code class="docutils literal notranslate"><span class="pre">force</span></code> 强制代码行数显示(优先级最高).</p></li>
+<li><p class="linemarker linemarker-286">代码块指令为 <code class="docutils literal notranslate"><span class="pre">code-block</span></code> , 可选参数有 <code class="docutils literal notranslate"><span class="pre">linenos行数显示</span></code> | <code class="docutils literal notranslate"><span class="pre">emphasize-lines强调行</span></code> | <code class="docutils literal notranslate"><span class="pre">caption导航文本</span></code> | <code class="docutils literal notranslate"><span class="pre">name预定义引用名</span></code> .</p></li>
+<li><p class="linemarker linemarker-287">外部引用代码指令为 <code class="docutils literal notranslate"><span class="pre">literalinclude</span></code>.可选参数有包含bacode-block外的： <code class="docutils literal notranslate"><span class="pre">encoding编码</span></code> | <code class="docutils literal notranslate"><span class="pre">lines引用指定行</span></code> .</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-289"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>全局代码配置：
+
+<span class="p">..</span> <span class="ow">highlight</span><span class="p">::</span> python
+  <span class="nc">:linenothreshold:</span> 3
+
+代码块编写：
+
+<span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+  <span class="nc">:emphasize-lines:</span> 1-2,5
+  <span class="nc">:caption:</span> 这是一个python代码块的标题
+  <span class="nc">:name:</span> test
+
+  def main():
+    print(&#39;#&#39;*10)
+    print(&#39;这是第三行.&#39;)
+    print(&#39;这是第四行&#39;)
+    print(&#39;这是第五行&#39;)
+
+引用外部代码：
+
+<span class="p">  ..</span> <span class="ow">literalinclude</span><span class="p">::</span> index.rst
+    <span class="nc">:linenos:</span>
+    <span class="nc">:language:</span> rst
+    <span class="nc">:emphasize-lines:</span> 1-7,10
+    <span class="nc">:encoding:</span> utf-8
+    <span class="nc">:lines:</span> 1-11
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-320"><strong>实现效果</strong></p></li>
+</ul>
+<p class="linemarker linemarker-325">代码块编写：</p>
+<div class="literal-block-wrapper docutils container" id="test">
+<div class="code-block-caption"><span class="caption-text">这是一个python代码块的标题</span><a class="headerlink" href="#test" title="此代码块的永久链接"></a></div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos">1</span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span class="hll"><span class="linenos">2</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;#&#39;</span><span class="o">*</span><span class="mi">10</span><span class="p">)</span>
+</span><span class="linenos">3</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;这是第三行.&#39;</span><span class="p">)</span>
+<span class="linenos">4</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;这是第四行&#39;</span><span class="p">)</span>
+<span class="hll"><span class="linenos">5</span>  <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;这是第五行&#39;</span><span class="p">)</span>
+</span></pre></div>
+</div>
+</div>
+<p class="linemarker linemarker-338">引用外部代码：</p>
+<blockquote>
+<div><div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span><span class="gh">reStructuredText 指南</span>
+</span><span class="hll"><span class="linenos"> 2</span><span class="gh">================================</span>
+</span><span class="hll"><span class="linenos"> 3</span>
+</span><span class="hll"><span class="linenos"> 4</span><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+</span><span class="hll"><span class="linenos"> 5</span>   <span class="nc">:maxdepth:</span> 2
+</span><span class="hll"><span class="linenos"> 6</span>   <span class="nc">:caption:</span> 目录
+</span><span class="hll"><span class="linenos"> 7</span>   <span class="nc">:numbered:</span>
+</span><span class="linenos"> 8</span>   
+<span class="linenos"> 9</span>   01基本介绍.rst
+<span class="hll"><span class="linenos">10</span>   02基础语法.rst
+</span><span class="linenos">11</span>   03拓展语法.rst
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="id12">
+<h2>表格指令<a class="headerlink" href="#id12" title="此标题的永久链接"></a></h2>
+<div class="admonition- admonition">
+<p class="admonition-title">语法要点</p>
+<ul class="simple">
+<li><p class="linemarker linemarker-353">可使用表格指令： <code class="docutils literal notranslate"><span class="pre">table</span></code> 常规表格 | <code class="docutils literal notranslate"><span class="pre">list-table</span></code> 列表表格 | <code class="docutils literal notranslate"><span class="pre">csv-table</span></code> CSV表格.</p></li>
+</ul>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-355"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">..</span> <span class="ow">csv-table</span><span class="p">::</span> CSV表格
+<span class="linenos">2</span>  <span class="nc">:header:</span> &quot;表头1&quot;, &quot;表头2&quot;
+<span class="linenos">3</span>  <span class="nc">:widths:</span> 10, 10
+<span class="linenos">4</span>
+<span class="linenos">5</span>  1-1, 1-2
+<span class="linenos">6</span>  2-1, 2-2
+<span class="linenos">7</span>  3-1, 3-2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-367"><strong>实现效果</strong></p></li>
+</ul>
+<table class="docutils align-default" id="id24">
+<caption><span class="caption-text">CSV表格</span><a class="headerlink" href="#id24" title="此表格的永久链接"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="linemarker linemarker-1">表头1</p></th>
+<th class="head"><p class="linemarker linemarker-1">表头2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="linemarker linemarker-1">1-1</p></td>
+<td><p class="linemarker linemarker-1">1-2</p></td>
+</tr>
+<tr class="row-odd"><td><p class="linemarker linemarker-1">2-1</p></td>
+<td><p class="linemarker linemarker-1">2-2</p></td>
+</tr>
+<tr class="row-even"><td><p class="linemarker linemarker-1">3-1</p></td>
+<td><p class="linemarker linemarker-1">3-2</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id13">
+<h2>脚注、引用与替换<a class="headerlink" href="#id13" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p class="linemarker linemarker-382"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span>这里用了脚注1 <span class="s">[#脚注1]_</span> .这里用了脚注2 <span class="s">[#脚注2]_</span> .
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="p">..</span> <span class="nt">[#脚注1]</span> 脚注1的解释文本.
+<span class="linenos"> 4</span><span class="p">..</span> <span class="nt">[#脚注2]</span> 脚注2的解释文本.
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span>这里是 <span class="s">[引用1]_</span> .这里是 <span class="s">[引用2]_</span> .
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="p">..</span> <span class="nt">[引用1]</span> 引用1的文本.
+<span class="linenos">10</span><span class="p">..</span> <span class="nt">[引用2]</span> 引用2的文本.
+<span class="linenos">11</span>
+<span class="linenos">12</span>
+<span class="linenos">13</span>这里使用了替换1—— |替换标识1| .这里使用了替换2—— |替换标识2| .
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="p">..</span> <span class="nt">|替换标识1|</span> <span class="ow">replace</span><span class="p">::</span> 替换内容1 hello
+<span class="linenos">16</span><span class="p">..</span> <span class="nt">|替换标识2|</span> <span class="ow">replace</span><span class="p">::</span> 替换内容2 world
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-404"><strong>实现效果</strong></p></li>
+</ul>
+<p class="linemarker linemarker-406">这里用了脚注1 <a class="footnote-reference brackets" href="#id16" id="id14" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> .这里用了脚注2 <a class="footnote-reference brackets" href="#id17" id="id15" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> .</p>
+<aside class="footnote brackets" id="id16" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">1</a><span class="fn-bracket">]</span></span>
+<p class="linemarker linemarker-408">脚注1的解释文本.</p>
+</aside>
+<aside class="footnote brackets" id="id17" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id15">2</a><span class="fn-bracket">]</span></span>
+<p class="linemarker linemarker-409">脚注2的解释文本.</p>
+</aside>
+<p class="linemarker linemarker-412">这里是 <a class="reference internal" href="04%E5%A4%87%E4%BB%BD%E6%8C%87%E5%8D%97.html#id20" id="id18"><span>[引用1]</span></a> .这里是 <a class="reference internal" href="04%E5%A4%87%E4%BB%BD%E6%8C%87%E5%8D%97.html#id21" id="id19"><span>[引用2]</span></a> .</p>
+<div role="list" class="citation-list">
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">引用1</a><span class="fn-bracket">]</span></span>
+<p class="linemarker linemarker-414">引用1的文本.</p>
+</div>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">引用2</a><span class="fn-bracket">]</span></span>
+<p class="linemarker linemarker-415">引用2的文本.</p>
+</div>
+</div>
+<p class="linemarker linemarker-418">这里使用了替换1—— 替换内容1 hello .这里使用了替换2—— 替换内容2 world .</p>
+</section>
+<section id="id22">
+<h2>版本管理块指令<a class="headerlink" href="#id22" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p class="linemarker linemarker-427"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="p">..</span> <span class="ow">versionadded</span><span class="p">::</span> 版本1.0
+<span class="linenos">2</span>  <span class="ge">*新增内容*</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="p">..</span> <span class="ow">versionchanged</span><span class="p">::</span> 版本2.0
+<span class="linenos">5</span>  <span class="ge">*改变内容*</span>
+<span class="linenos">6</span>
+<span class="linenos">7</span><span class="p">..</span> <span class="ow">deprecated</span><span class="p">::</span> 版本3.0
+<span class="linenos">8</span>  <span class="ge">*弃用内容*</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-440"><strong>实现效果</strong></p></li>
+</ul>
+<div class="versionadded">
+<p class="linemarker linemarker-444"><span class="versionmodified added">在 版本1.0 版本加入: </span><em>新增内容</em></p>
+</div>
+<div class="versionchanged">
+<p class="linemarker linemarker-447"><span class="versionmodified changed">在 版本2.0 版本发生变更: </span><em>改变内容</em></p>
+</div>
+<div class="deprecated">
+<p class="linemarker linemarker-450"><span class="versionmodified deprecated">自 版本3.0 版本弃用: </span><em>弃用内容</em></p>
+</div>
+</section>
+<section id="id23">
+<h2>文字特殊处理指令(分列、居中、无索引标题)<a class="headerlink" href="#id23" title="此标题的永久链接"></a></h2>
+<ul class="simple">
+<li><p class="linemarker linemarker-454"><strong>源代码</strong></p></li>
+</ul>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="p">..</span> <span class="ow">centered</span><span class="p">::</span> 居中文字
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="p">..</span> <span class="ow">rubric</span><span class="p">::</span> 不加入索引目录节点的标题
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="p">..</span> <span class="ow">hlist</span><span class="p">::</span>
+<span class="linenos"> 6</span>  <span class="nc">:columns:</span> 3
+<span class="linenos"> 7</span>
+<span class="linenos"> 8</span>  <span class="m">*</span> 有行列的列表
+<span class="linenos"> 9</span>  <span class="m">*</span> 元素1
+<span class="linenos">10</span>  <span class="m">*</span> 元素2
+<span class="linenos">11</span>  <span class="m">*</span> 元素3
+<span class="linenos">12</span>  <span class="m">*</span> 元素4
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="linemarker linemarker-471"><strong>实现效果</strong></p></li>
+</ul>
+<p class="centered">
+<strong>居中文字</strong></p><p class="rubric">不加入索引目录节点的标题</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p class="linemarker linemarker-480">有行列的列表</p></li>
+<li><p class="linemarker linemarker-481">元素1</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p class="linemarker linemarker-482">元素2</p></li>
+<li><p class="linemarker linemarker-483">元素3</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p class="linemarker linemarker-484">元素4</p></li>
+</ul>
+</td></tr></table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="01%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D.html" class="btn btn-neutral float-left" title="基本介绍" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="03%E6%8B%93%E5%B1%95%E8%AF%AD%E6%B3%95.html" class="btn btn-neutral float-right" title="拓展语法" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, Arthur。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

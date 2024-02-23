@@ -26,8 +26,6 @@ release = 'dev'
 ############################################################################
 # -- 2. 拓展的python module模块 --------------------------------------------
 
-from recommonmark.parser import CommonMarkParser
-
 extensions = [    
      'recommonmark',  # markdown语法支持插件配合sphinx_markdown_tables使用
      'sphinx_markdown_tables', # markdown语法支持插件
@@ -73,10 +71,10 @@ html_css_files = ['custom.css'] # 指定样式表文件
 # 语言配置
 language = 'zh_CN'
 
+from recommonmark.parser import CommonMarkParser
 # 指定后缀文件使用的解析器
 source_parsers = {
     '.md': CommonMarkParser,
-    '.MD': CommonMarkParser,
 }
 
 # 指定后缀文件识别格式

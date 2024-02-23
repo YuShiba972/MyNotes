@@ -1,0 +1,13 @@
+基本介绍
+==============================
+
+.. admonition:: **阅读前必看：python | docutils | sphinx 的联系**
+
+    - ``python``：高级编程语言.
+    - ``docutils``：基于python编写的rst文档的解析工具，由python编写，存在形式为python包，可通过pip安装。
+    - ``sphinx``：基于docutils文档解析引擎的文档生成工具，存在形式为python包，可通过pip安装。
+
+.. admonition:: **reStructuredText 语法指令集**
+
+    - ``docutils指令`` ： reStructuredText的基础指令，以docutils生成的文档均支持。
+    - ``sphinx指令`` ： reStructuredText高级指令，适用于使用sphinx的文档项目，支持绝大部分docutils指令，并有自己sphinx指令。

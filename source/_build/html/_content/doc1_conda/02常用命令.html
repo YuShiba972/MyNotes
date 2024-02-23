@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. conda常用命令速查 &mdash; Notes dev 文档</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js?v=21faf2a6"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=4825356b"></script>
+        <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="../../_static/copybutton.js?v=f281be69"></script>
+        <script src="../../_static/translations.js?v=beaddf03"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="markdown指南" href="../doc2_markdown/index.html" />
+    <link rel="prev" title="1. conda基本知识" href="01%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Notes
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <p class="caption" role="heading"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">conda 笔记</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86.html">1. conda基本知识</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. conda常用命令速查</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.1. conda环境操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.2. conda包操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#conda-condarc">2.3. conda配置文件.condarc修改配置命令</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../doc2_markdown/index.html">markdown指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../doc3_rst/index.html">reStructuredText 指南</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Notes</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">conda 笔记</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>conda常用命令速查</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/_content/doc1_conda/02常用命令.md.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="conda">
+<h1><span class="section-number">2. </span>conda常用命令速查<a class="headerlink" href="#conda" title="此标题的永久链接"></a></h1>
+<section id="id1">
+<h2><span class="section-number">2.1. </span>conda环境操作<a class="headerlink" href="#id1" title="此标题的永久链接"></a></h2>
+<p class="linemarker linemarker-5">查询环境
+: conda info –envs | conda env list</p>
+<p class="linemarker linemarker-8">激活环境
+: conda activate 环境名</p>
+<p class="linemarker linemarker-11">创建环境
+: conda create –name 环境名
+python==3.8</p>
+<p class="linemarker linemarker-15">删除环境
+: conda env remove –name 环境名</p>
+<p class="linemarker linemarker-18">克隆环境
+: conda create –clone 已存在的环境 –name 环境名</p>
+</section>
+<section id="id2">
+<h2><span class="section-number">2.2. </span>conda包操作<a class="headerlink" href="#id2" title="此标题的永久链接"></a></h2>
+<p class="linemarker linemarker-25">查看当前虚拟环境的包
+: conda list</p>
+<p class="linemarker linemarker-28">查看指定虚拟环境的包
+: conda list –name 环境名</p>
+</section>
+<section id="conda-condarc">
+<h2><span class="section-number">2.3. </span>conda配置文件.condarc修改配置命令<a class="headerlink" href="#conda-condarc" title="此标题的永久链接"></a></h2>
+<p class="linemarker linemarker-33">conda环境安装根目录添加
+: conda config –add envs_dirs /path/to/your/preferred/envs</p>
+<p class="linemarker linemarker-36">conda包安装根目录添加
+: conda config –add pkgs_dirs /path/to/your/preferred/pkgs</p>
+<p class="linemarker linemarker-39">conda所有配置(包括默认)
+: conda config –show</p>
+<p class="linemarker linemarker-42">conda显示配置文件
+: conda config –show-sources</p>
+<p class="linemarker linemarker-45">conda镜像地址显示
+: conda config –set show_channel_urls yes</p>
+<p class="linemarker linemarker-48">conda镜像源添加
+: conda config –add channels 源地址</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="01%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86.html" class="btn btn-neutral float-left" title="1. conda基本知识" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../doc2_markdown/index.html" class="btn btn-neutral float-right" title="markdown指南" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2024, Arthur。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
